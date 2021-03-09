@@ -1,0 +1,71 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+      home: Home(),
+    ));
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('first App'),
+        ),
+        body: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Expanded(
+                flex: 2,
+                child: Container(
+                  color: Color.fromRGBO(53, 49, 55, 1),
+                  padding: EdgeInsets.all(28),
+                  child: Text(
+                    'Bitcoin',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 4,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Container(
+                      color: Color.fromRGBO(53, 49, 55, 1),
+                      padding: EdgeInsets.all(14),
+                      child: Text(
+                        'Bitcoin',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                    Container(
+                      color: Color.fromRGBO(53, 49, 55, 1),
+                      padding: EdgeInsets.all(14),
+                      child: Text(
+                        'Bitcoin2',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                  padding: EdgeInsets.all(28.0),
+                  child: Text('Bitcoin'),
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(53, 49, 55, 1),
+                    
+                    image: DecorationImage(
+                      image: AssetImage('Assets/1200px-Bitcoin.svg.png'),
+                    ),
+                  ),
+                  margin: EdgeInsets.all(0),
+                ),
+              ),
+            ]));
+  }
+}
